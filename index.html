@@ -8,12 +8,56 @@
 <body>
   <h1>Uso de dnsipfs.js desde CDN</h1>
 
-  <!-- Incluye el script de dnsipfs.js desde jsDelivr Víctor M Arbiol Martinez 2023-->
-  <script src="https://cdn.jsdelivr.net/gh/aratan/dnsipfs@main/dnsipfs.js"></script>
+  <!-- Incluye el script de dnsipfs.js desde jsDelivr -->
+  <!-- <script src="https://cdn.jsdelivr.net/gh/aratan/dnsipfs@main/dnsipfs.js"></script> -->
 
-  <script>
-    // Aquí puedes utilizar funciones o realizar acciones con dnsipfs.js
-    // Por ejemplo, puedes llamar a funciones definidas en dnsipfs.js
+  
+  <script>  
+    const domain = "dataarchitectai.link"; 
   </script>
+
+
+
+
+  
+  <script src="https://cdn.jsdelivr.net/gh/aratan/dnsipfs@main/0.02/dist/dnsipfs.js"></script>
+
+
+
+  
+  <!-- Nuevo script para la creación del deploit -->
+  <script>
+    // Función para mostrar el resultado de DNSLink en un iframe
+    function mostrarDNSLink(data) {
+      const iframeResultado = document.getElementById('iframeResultado');
+
+      // Verifica si la respuesta tiene datos
+      if (data && data.Answer && data.Answer.length > 0) {
+        // Busca el valor de dnslink en los resultados
+        const dnslinkResult = data.Answer.find(result => result.data.includes("dnslink"));
+
+        if (dnslinkResult) {
+          // Extrae el valor de dnslink y construye la URL con Cloudflare para IPNS/IPFS
+          const dnslinkValue = dnslinkResult.data.match(/dnslink=(.*)/)[1];
+          // https://cloudflare-ipfs.com/ipns/dataarchitectai.link/
+          const urlConCloudflare = `https://cloudflare-ipfs.com/${dnslinkValue}`;
+
+          // Crea un iframe y establece su atributo src con la URL obtenida
+          const iframe = document.createElement('iframe');
+          iframe.src = urlConCloudflare;
+
+          // Agrega el iframe al cuerpo del documento o a un contenedor específico
+          document.body.appendChild(iframe);
+          console.log("iframe creado con URL: ", urlConCloudflare);
+        } else {
+          // Si no se encuentra dnslink, muestra un mensaje
+          iframeResultado.textContent = 'No se encontró el valor de DNSLink.';
+        }
+      } 
+    }
+  </script>
+
+
+
 </body>
 </html>
