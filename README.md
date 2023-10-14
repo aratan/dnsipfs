@@ -2,7 +2,7 @@
 La biblioteca DNS2IPFS
 
 
-La biblioteca dns-txt en JavaScript es una herramienta eficaz para interactuar con registros DNS TXT. Permite a los desarrolladores realizar consultas DNS TXT para un dominio específico y extraer información útil de los registros devueltos.
+La biblioteca dnsipfs en JavaScript es una herramienta eficaz para interactuar con registros DNS TXT. Permite a los desarrolladores realizar consultas DNS TXT para un dominio específico y extraer información útil de los registros devueltos.
 
 Características clave:
 
