@@ -15,3 +15,10 @@ providing detailed information about possible problems during DNS TXT queries.
 Adaptability: It is easily adaptable to meet various needs related to searching for information in DNS TXT records.
 
 https://cdn.jsdelivr.net/gh/aratan/dnsipfs@main/dnsipfs.js
+https://cdn.jsdelivr.net/gh/aratan/dnsipfs@main/0.02/dist/dnsipfs.js
+
+Resolver:
+ const domain = "dataarchitectai.link"; 
+
+Response: 
+  console.log(data)
