@@ -1,15 +1,17 @@
-# dnsipfs
-La biblioteca DNS2IPFS
+# dnsipfs.
 
+## The DNSIPFS library
 
-La biblioteca dnsipfs en JavaScript es una herramienta eficaz para interactuar con registros DNS TXT. Permite a los desarrolladores realizar consultas DNS TXT para un dominio específico y extraer información útil de los registros devueltos.
+The dnsipfs JavaScript library is an efficient tool for reading with DNS TXT records. 
 
-Características clave:
+It allows developers to perform DNS TXT queries for a specific domain and extract useful information from the returned records, 
+e.g. associate it with an ipfs hash.Dsn example: dnslink=/ipfs/QmNPY6QK1gCcSx2wD7C6seG31o5TkXm1pgpoUj8BEvJpXs"
 
-Sencillez de Uso: Proporciona una interfaz sencilla para realizar consultas DNS TXT, lo que facilita la integración en proyectos JavaScript.
+Key features:Ease of Use: Provides a simple interface for performing DNS TXT queries, which facilitates integration into JavaScript projects.Efficiency:
 
-Eficiencia: La biblioteca está diseñada para realizar consultas de manera eficiente, minimizando la carga y el tiempo de respuesta.
+The library is designed to perform queries efficiently, minimizing load and response time.Error Handling: Provides robust error handling mechanisms, 
+providing detailed information about possible problems during DNS TXT queries.
 
-Manejo de Errores: Ofrece mecanismos para manejar errores de manera robusta, proporcionando información detallada sobre posibles problemas durante las consultas DNS TXT.
+Adaptability: It is easily adaptable to meet various needs related to searching for information in DNS TXT records.
 
-Adaptabilidad: Es fácilmente adaptable para satisfacer diversas necesidades relacionadas con la búsqueda de información en registros DNS TXT.
+https://cdn.jsdelivr.net/gh/aratan/dnsipfs@main/dnsipfs.js
